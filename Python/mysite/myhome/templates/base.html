@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static from staticfiles %}
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Sravan K Ghantasala" />
+
+		<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0" />
+		<!-- device-width -->
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<!-- Bootstrap related imports -->
+		<link href="{% static "Flat-UI-master/dist/css/vendor/bootstrap.min.css" %}" rel="stylesheet">
+		<link href="{% static "Flat-UI-master/dist/css/flat-ui.css" %}" rel="stylesheet">
+		<link href="{% static "Flat-UI-master/docs/assets/css/demo.css" %}" rel="stylesheet">
+		
+		<!-- jquery -->
+		<script src="{%static "JS/jquery-2.1.1.js"%}"></script>
+		
+		<!-- my Java scripts -->
+		<script src="{%static "JS/basic.js"%}"></script>
+
+		<!-- my CSS -->
+		<link href="{% static "CSS/basic.css" %}" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<div class="title-white">
+				<span style="text-align: center" >
+				<h1 class="headline">My Site</h1>
+				<h4>Sravan K Ghantasala</h4>
+				</span>
+				</div>
+			</header>
+
+			<div class="container">
+				<div class="row ">
+					<div class="col-xs-14">
+						<nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+									<span class="sr-only">Toggle navigation</span>
+								</button>
+								<a class="navbar-brand" href="#">Home</a>
+							</div>
+							<div class="collapse navbar-collapse" id="navbar-collapse-01">
+								<ul class="nav navbar-nav navbar-left" id = "topic">
+									<li>
+										<!-- <a href="#fakelink">Python</a> -->
+										<a href="#" onclick="return tab_click('python');">Python</a>
+										<!-- <button type="button" class="btn btn-block btn-lg btn-primary">Python</button> -->
+									</li>
+									<li>
+										<a href="#" onclick="return tab_click('java');">Java</a>
+									</li>
+									<li>
+										<a href="#" onclick="return tab_click('shell');">Shell</a>
+									</li>
+									<li>
+										<a href="#" onclick="return tab_click('c++');">C++</a>
+									</li>
+									<li>
+										<a href="#" onclick="return tab_click('misc');">Misc</a>
+									</li>
+									<!-- <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Topics <b class="caret"></b></a>
+									<span class="dropdown-arrow"></span>
+									<ul class="dropdown-menu">
+									<li>
+									<a href="#">Action</a>
+									</li>
+									<li>
+									<a href="#">Another action</a>
+									</li>
+									<li>
+									<a href="#">Something else here</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+									<a href="#">Separated link</a>
+									</li>
+									</ul>
+									</li> -->
+									<!-- <li>
+										<a href="#fakelink" class="navbar-right">About Us</a>
+									</li> -->
+								</ul>
+								<form class="navbar-form navbar-right" action="#" role="search">
+									<div class="form-group">
+										<div class="input-group">
+											<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+											<span class="input-group-btn">
+												<button type="submit" class="btn">
+													<span class="fui-search"></span>
+												</button> </span>
+										</div>
+									</div>
+								</form>
+							</div><!-- /.navbar-collapse -->
+						</nav><!-- /navbar -->
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- <footer>
+				<p>
+				&copy; Copyright  by Sravan K Ghantasala
+				</p>
+				</footer> -->
+			</div>
+		</div>
+	</body>
+</html>
