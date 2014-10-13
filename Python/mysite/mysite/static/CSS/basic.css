@@ -1,8 +1,15 @@
 body {
-	background-image: url("../images/myhome/index.jpeg")
+	/*background-image: url("../images/myhome/index.jpeg")*/
+	background-color: black;
 }
 
 .title-white {
 	color: white;
 	border: 2px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
