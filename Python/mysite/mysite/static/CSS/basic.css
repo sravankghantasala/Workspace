@@ -1,6 +1,7 @@
 body {
-	/*background-image: url("../images/myhome/index.jpeg")*/
-	background-color: black;
+	background: url("../images/myhome/bg5.jpg") no-repeat center center fixed;
+	background-size: cover;
+	/*background-color: black;*/
 }
 
 .title-white {
@@ -8,8 +9,16 @@ body {
 	border: 2px;
 }
 
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+	font-size: 100px;
+  	line-height: 1;
+}
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
