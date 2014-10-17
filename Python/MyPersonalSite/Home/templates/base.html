@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static from staticfiles %}
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Sravan K Ghantasala" />
+
+		<meta name="viewport" content="width=1000, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0" />
+		<!-- device-width -->
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<!-- jquery -->
+		<script type="text/javascript" src="{%static "JS/jquery-2.1.1.js"%}"></script>
+
+		<!-- Bootstrap related imports -->
+		<!-- Flat-UI -->
+		<!-- <link href="{% static "Bootstraps/Flat-UI-master/dist/css/vendor/bootstrap.min.css" %}" rel="stylesheet"> -->
+		<!-- <link href="{% static "Bootstraps/Flat-UI-master/dist/css/flat-ui.css" %}" rel="stylesheet"> -->
+		<!-- <link href="{% static "Bootstraps/Flat-UI-master/docs/assets/css/demo.css" %}" rel="stylesheet"> -->
+		<!-- Twitter Bootstrap -->
+		<link href="{% static "Bootstraps/bootstrap-3.2.0-dist/css/bootstrap.min.css" %}" rel="stylesheet">
+		<script type="text/javascript" src="{% static "Bootstraps/bootstrap-3.2.0-dist/js/bootstrap.min.js" %}"></script>
+
+		<!-- Select Picker -->
+		<link href ="{% static "Bootstraps/select-picker/dist/css/bootstrap-select.css" %}" rel="stylesheet">
+		<script type="text/javascript" src="{% static "Bootstraps/select-picker/dist/js/bootstrap-select.js" %}"></script>
+
+		<!-- my Java scripts -->
+		<script type="text/javascript" src="{%static "JS/basic.js"%}"></script>
+
+		<!-- my CSS -->
+		<link href="{% static "CSS/basic.css" %}" rel="stylesheet"/>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="center-block">
+				<div class="jumbotron col-xs-12">
+					<span style="text-align: center" > <h1 >My Site</h1> <h3>Sravan K Ghantasala</h3> </span>
+				</div>
+				<div class="row center-block">
+					<div class="col-xs-12">
+						<nav class="navbar navbar-default" role="navigation">
+							<div class="container-fluid">
+								 <!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">Home</a>
+								</div> 
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav">
+										<li >
+											<a style="cursor: pointer;font-weight: bold" onclick="tab_click('python');">Python</a>
+										</li>
+										<li>
+											<a style="cursor: pointer;font-weight: bold" onclick="tab_click('python');">Java</a>
+										</li>
+										<li>
+											<a style="cursor: pointer;font-weight: bold" onclick="tab_click('python');">C++</a>
+										</li>
+										<li>
+											<a style="cursor: pointer;font-weight: bold" onclick="tab_click('python');" >Bash</a>
+										</li>
+										<li>
+											<a style="cursor: pointer;font-weight: bold" onclick="tab_click('python');">Misc</a>
+										</li>
+
+									</ul>
+									<form class="navbar-form navbar-right" role="search">
+										<div class="form-group">
+											<input type="text" class="span2 form-control" placeholder="Search">
+											<button type="button" class="btn btn-success">
+												Search
+											</button>
+										</div>
+									</form>
+									<!-- <ul class="nav navbar-nav navbar-right">
+									<li>
+									<a style="cursor: pointer;">
+									<img src="{% static "images/myhome/add-icon.png" %}" width=25 height=25/> </a>
+									</li>
+									</ul> -->
+									<div class="nav navbar-nav navbar-right" style="padding: 5px; padding-right: 20px;">
+										<a type="button" style="cursor: pointer;" href="#addPageModal" data-toggle="modal" id="addPage"> <img src="{% static "images/Home/add-icon.png" %}" width=40 height=40/> </a>
+										<!-- <button class='btn' data-toggle='modal' data-target='#addPageModal'> <img src="{% static "images/Home/add-icon.png" %}" width=40 height=40/> </button> -->
+									</div>
+								</div><!-- /.navbar-collapse -->
+							</div><!-- /.container-fluid -->
+						</nav>
+					</div>
+					<!-- Column-xs-12 -->
+				</div>
+				<!-- Center-block -->
+			</div>
+			<!-- row -->
+
+			<!-- <footer>
+			<p>
+			&copy; Copyright  by Sravan K Ghantasala
+			</p>
+			</footer> -->
+		</div>
+
+		<!-- Modals -->
+
+		<!-- Add Page Modal -->
+		<div id="addPageModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addPageModalLabel" aria-hidden="true">
+			<div class="modal-dialog ">
+				<div class="modal-header">
+					<h3 class="modal-title">Add a Page here ...</h3>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form">
+						<!-- Selecting Topic -->
+						<div class="form-group">
+							<Label class="col-sm-4 control-label" for="topicSelection">Topic</Label>
+							<div class = "col-sm-8 ">
+								<select class="selectpicker" id="">
+									<option>Python</option>
+									<option>Java</option>
+									<option>Bash</option>
+									<option>C++</option>
+									<option>Misc</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- Entering the author -->
+						<div class="form-group">
+							<Label class="col-sm-4 control-label" for="topicSelection">Author</Label>
+							<div class = "col-sm-8 ">
+								<select class="selectpicker" id="authorSelection">
+									<option>Sravan K Ghantasala</option>
+									<option>Praveen Kumar Ghantasala</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- entering github link -->
+						<div class="form-group">
+							<label for="gitlink" class="col-sm-4 control-label">Git Hub Link</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="gitlink" placeholder="Github Link">
+							</div>
+						</div>
+
+						<!-- Entering webpage to be called... relative path should be given from tempaltes. -->
+						<div class="form-group">
+							<label for="pagepath" class="col-sm-4 control-label">Web Page</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="pagepath" placeholder="Webpage Path from templates.">
+							</div>
+						</div>
+
+						<!-- Entering Description -->
+						<div class="form-group">
+							<label for="desc" class="col-sm-4 control-label">Description</label>
+							<div class="col-sm-8">
+								<!-- <input type="textarea" class="form-control" id="desc" placeholder="Descripion"> -->
+								<textarea class="form-control" id="desc" placeholder="Description"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-warning" id="cancelPostButton" class="close" data-dismiss="modal">
+						Cancel
+					</button>
+					<button class="btn btn-primary" id="submitPostButton" >
+						Submit
+					</button>
+				</div>
+			</div>
+			<div>
+
+			</div>
+		</div>
+	</body>
+</html>
