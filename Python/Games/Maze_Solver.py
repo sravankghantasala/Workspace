@@ -94,12 +94,14 @@ def maze_printer(size,data,moves):
         if count==size :
             print()
             count=0
-        
 
-if __name__ == '__main__':
+def maze_solver():
     print_banner(0)
     size=get_size()
     orig=[i for i in range(1,size*size)]
     orig.append('_')
     shuffle(orig)
     maze_looper(size,orig)
+
+if __name__ == '__main__':
+    maze_solver()
