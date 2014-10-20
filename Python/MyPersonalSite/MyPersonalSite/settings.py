@@ -47,7 +47,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+	#Have to take out this backend to let it run smoothly at home and office
+   # 'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'MyPersonalSite.urls'
