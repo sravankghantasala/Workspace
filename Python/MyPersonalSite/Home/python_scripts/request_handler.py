@@ -18,6 +18,5 @@ def _post(req):
     if req.get('transaction').lower() == 'topic':
         return dumps({'data':req.get('topic') + ' topic'})
     elif req.get('transaction').lower() == 'submitpost':
-        
         return dumps({'data': 'got the data .. will process!'})
         
