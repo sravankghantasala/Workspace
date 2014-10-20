@@ -1,4 +1,4 @@
-import json
+from json import dumps,loads
 
 
 def _get():
@@ -15,6 +15,9 @@ def _post(req):
         Handler for POST requests.
         Except the initial call for the home page, rest every thing needs to go through this.
     '''
-    if req.get('topic').lower() in ['python','java','shell','c++','misc']:
-        return json.dumps({'data':req.get('topic') + ' topic'})
-    
+    if req.get('transaction').lower() == 'topic':
+        return dumps({'data':req.get('topic') + ' topic'})
+    elif req.get('transaction').lower() == 'submitpost':
+        
+        return dumps({'data': 'got the data .. will process!'})
+        

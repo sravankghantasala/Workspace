@@ -10,5 +10,7 @@ def homepage(request):
     if (request.method == 'GET'):
         return render_to_response('index.html')
     elif (request.method == 'POST'):
-        return HttpResponse(handle._post(request.POST), 'application/json') #have to use mimetype='application/json' for django 1.6
+        d = handle._post(request.POST)
+        print(d)
+        return HttpResponse(d, 'application/json') #have to use mimetype='application/json' for django  <1.6
     
