@@ -16,7 +16,8 @@ def _post(req):
         Except the initial call for the home page, rest every thing needs to go through this.
     '''
     if req.get('transaction').lower() == 'topic':
-        return dumps({'data':req.get('topic') + ' topic'})
+        return dumps({'data': req.get('topic') + ' topic'})
     elif req.get('transaction').lower() == 'submitpost':
+#         TODO: Have to add the data to sql database.
         return dumps({'data': 'got the data .. will process!'})
         
