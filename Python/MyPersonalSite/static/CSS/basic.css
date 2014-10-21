@@ -7,6 +7,7 @@ body {
 	width: 800px;
 }
 
+/*Heading*/
 .title-white {
 	color: white;
 	border: 2px;
@@ -26,6 +27,16 @@ body {
 	margin-right: auto;
 }
 
+/*Form Validation*/
+.input.in_error{
+	background-color: #FF0000;
+}
+
+.label.in_error{
+	background-color: #FF0000;
+}
+
+/*Modal*/
 .modal-header {
 	background-color: #8A2BE2;
 	color: white;

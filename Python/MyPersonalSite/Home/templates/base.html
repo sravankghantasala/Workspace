@@ -130,7 +130,7 @@
 					<h3 class="modal-title">Add a Page here ...</h3>
 				</div>
 				<div class="modal-body">
-					<form class="form-horizontal" role="form" id="submitPostForm">
+					<form class="form-horizontal" role="form" id="submitPostForm" onsubmit="return submit_post()">
 						<!-- Selecting Topic -->
 						<div class="form-group">
 							<Label class="col-sm-4 control-label" for="topicSelection">Topic</Label>
@@ -166,7 +166,7 @@
 
 						<!-- entering github link -->
 						<div class="form-group">
-							<label for="gitlink" class="col-sm-4 control-label">Git Hub Link</label>
+							<label for="gitlink" class="col-sm-4 control-label" id="gitlinklabel">Git Hub Link</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control" id="gitlink" placeholder="Github Link">
 							</div>
@@ -174,7 +174,7 @@
 
 						<!-- Entering webpage to be called... relative path should be given from tempaltes. -->
 						<div class="form-group">
-							<label for="pagepath" class="col-sm-4 control-label">Web Page</label>
+							<label for="pagepath" class="col-sm-4 control-label" id ="pagePathLabel">Web Page</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control" id="pagePath" placeholder="Webpage Path from templates.">
 								<span class="label label-warning">Please input the relative path from templates </span>
@@ -194,7 +194,7 @@
 							<button class="btn btn-warning" id="cancelPost" class="close" data-dismiss="modal">
 								Cancel
 							</button>
-							<button class="btn btn-primary" id="submitPost" type="submit" onclick="submit_post(this.form)">
+							<button class="btn btn-primary" id="submitPost" type="submit" > <!-- onclick="return submit_post(this.form);" -->
 								Submit
 							</button>
 						</div>
