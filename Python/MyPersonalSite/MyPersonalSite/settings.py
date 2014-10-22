@@ -58,7 +58,7 @@ WSGI_APPLICATION = 'MyPersonalSite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-
+# TODO: Have to implement mongodb
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

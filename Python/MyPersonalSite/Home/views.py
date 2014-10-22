@@ -7,6 +7,7 @@ from Home.python_scripts import request_handler as handle
 
 @csrf_exempt
 def homepage(request):
+    print(request.method)
     if (request.method == 'GET'):
         return render_to_response('index.html')
     elif (request.method == 'POST'):

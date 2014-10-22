@@ -37,7 +37,14 @@
 		<!-- Tags -->
 		<link rel="stylesheet" href="{% static "Bootstraps/Tags/dist/css/bootstrap-tags.css" %}" >
 		<script type="text/javascript" src="{% static "Bootstraps/Tags/dist/js/bootstrap-tags.min.js" %}"></script>
-
+		
+		<!-- Sweet Alert  -->
+		<link rel="stylesheet" href="{% static "Bootstraps/Sweet-Alert/sweet-alert.css" %}" >
+		<script type="text/javascript" src="{% static "Bootstraps/Sweet-Alert/sweet-alert.min.js" %}"></script>
+		
+		<!-- Underscore js -->
+		<script type="text/javascript" src="{% static "JS/underscore.js" %}"></script>
+		
 		<!-- my Java scripts -->
 		<script type="text/javascript" src="{%static "JS/basic.js"%}"></script>
 
@@ -86,20 +93,14 @@
 										</li>
 
 									</ul>
-									<form class="navbar-form navbar-right" role="search">
+									<form class="navbar-form navbar-right" role="search" id="searchForm">
 										<div class="form-group">
 											<input type="text" class="span2 form-control" placeholder="Search">
-											<button type="button" class="btn btn-success">
+											<button type="button" class="btn btn-success" id="searchBox">
 												Search
 											</button>
 										</div>
 									</form>
-									<!-- <ul class="nav navbar-nav navbar-right">
-									<li>
-									<a style="cursor: pointer;">
-									<img src="{% static "images/myhome/add-icon.png" %}" width=25 height=25/> </a>
-									</li>
-									</ul> -->
 									<div class="nav navbar-nav navbar-right" style="padding: 5px; padding-right: 20px;">
 										<a type="button" style="cursor: pointer;" href="#addPageModal" data-toggle="modal" id="addPage"> <img src="{% static "images/Home/add-icon.png" %}" width=40 height=40/> </a>
 										<!-- <button class='btn' data-toggle='modal' data-target='#addPageModal'> <img src="{% static "images/Home/add-icon.png" %}" width=40 height=40/> </button> -->
@@ -158,9 +159,6 @@
 
 						<div class="form-group">
 							<label for="tags" class="col-sm-4 control-label">Tags</label>
-							<!-- <div class="col-sm-8">
-							<input type="text" class="form-control" id="tags" placeholder="Tags">
-							</div> -->
 							<div class = "col-sm-8" id="tags"> </div>  
 						</div>
 
