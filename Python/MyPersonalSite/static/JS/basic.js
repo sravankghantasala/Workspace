@@ -14,6 +14,7 @@ function tab_click(topic) {
 
 function check_webPage(URL){
 	if( ! _.isEmpty(URL)) return true;
+	// TODO Have to ajax request the link and validate.
 	else return false;
 }
 function check_page(path){
@@ -103,7 +104,15 @@ function submit_post(){
 // 	
 	
 		$.post('/home/', d )
-			.done( function(data){ alert(JSON.stringify(data)); })
+			.done( function(data){ 
+				// swal({
+				// 	type: success,
+				// 	title: 'Post added successfully',
+				// 	text: 'Your post has been added to the database successfully',
+				// 	});
+				alert('success');
+				 })
+
 			.fail(function(xhr,status, error) { alert(status);
 												alert(error); })
 		;

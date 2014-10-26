@@ -9,7 +9,7 @@ from Home.python_scripts import request_handler as handle
 def homepage(request):
     print(request.method)
     if (request.method == 'GET'):
-        return render_to_response('index.html')
+        return render_to_response('index.html', handle._get())
     elif (request.method == 'POST'):
         d = handle._post(request.POST)
         print(d)

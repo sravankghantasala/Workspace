@@ -71,8 +71,8 @@ def CommandMeGordan():
             print('All the hostages were fully recovered Gordon. ')
             break
         print('Lifes of hostages at current stage : ', life)
-        cont = input('Do you still think you can save these hostages Gordon ? [y/n] ... ')
-        if not cont == 'y': 
+ 
+        if not input('Do you still think you can save these hostages Gordon ? [y/n] ... ') == 'y': 
             print('Take it easy Gordon, You did your best, but this time its joker\'s')
             break
     

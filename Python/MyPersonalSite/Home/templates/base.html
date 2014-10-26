@@ -58,6 +58,10 @@
 			<div class="center-block">
 				<div class="jumbotron col-xs-12">
 					<span style="text-align: center" > <h1 >My Site</h1> <h3>Sravan K Ghantasala</h3> </span>
+					<blockquote style="text-alignt: left">
+						<p>{{ Quotation.Quote }}</p>
+						<footer> {{ Quotation.Author }} </footer>
+					</blockquote>
 				</div>
 				<div class="row center-block">
 					<div class="col-xs-12">
@@ -109,6 +113,8 @@
 							</div><!-- /.container-fluid -->
 						</nav>
 					</div>
+					{% block content %}
+					{% endblock content %}
 					<!-- Column-xs-12 -->
 				</div>
 				<!-- Center-block -->
