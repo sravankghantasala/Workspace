@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from Home.views import homepage
+from Home.views import homepage,addpost
 
 urlpatterns = patterns('',
     # Examples:
@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$',homepage),
+    url(r'add-post',addpost),
 )
